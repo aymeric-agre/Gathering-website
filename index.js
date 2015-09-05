@@ -21,7 +21,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/Public'));
 
 app.get('*', function(req, res){
-    res.sendfile('./Public/index.html'); // load our public/index.html file
+    res.sendFile('/Public/index.html'); // load our public/index.html file
 });
 
 var server = app.listen(3000, function(){
