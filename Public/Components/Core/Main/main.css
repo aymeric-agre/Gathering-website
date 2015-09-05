@@ -1,32 +1,20 @@
+body {
+    height : 100%;
+}
+
+main{
+    height : 100%
+}
+
+main section{
+    height: 100%;
+}
+
 sidebar {
-    background-color: blue;
+    height : 100%;
+    background-color : blue;
 }
 
-@media (min-width : 600px) {
-    body {
-        height: 100%;
-    }
-
-    main {
-        height: 100%
-    }
-
-    main section {
-        height: 100%;
-    }
-
-    sidebar {
-        height: 100%;
-    }
-
-    content {
-        height: 100%;
-    }
-}
-
-@media (max-width : 600px){
-    sidebar{
-
-        min-height: 60px;
-    }
+content {
+    height : 100%;
 }

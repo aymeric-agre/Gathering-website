@@ -6,18 +6,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var angular2_1 = require('angular2/angular2');
-var ContentPageComponent = (function () {
-    function ContentPageComponent() {
+var MainComponent = (function () {
+    function MainComponent() {
     }
-    ContentPageComponent = __decorate([
+    MainComponent = __decorate([
         angular2_1.Component({
-            selector: 'content-page'
+            selector: 'Sidebar'
         }),
         angular2_1.View({
-            templateUrl: './Components/Core/Content/content_template.html'
-        })
-    ], ContentPageComponent);
-    return ContentPageComponent;
+            templateUrl: 'Components/Core/Sidebar/sidebar_template.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], MainComponent);
+    return MainComponent;
 })();
-angular2_1.bootstrap(ContentPageComponent);
+angular2_1.bootstrap(MainComponent);
