@@ -1,15 +1,15 @@
 import {Component, View, bootstrap} from 'angular2/angular2';
 
 @Component({
-    selector : 'contentPage'
+    selector : 'Content'
 })
 
 @View({
     templateUrl: './Components/Core/Content/content_template.html'
 })
 
-class ContentPageComponent{
+class ContentComponent{
 
 }
 
-bootstrap(ContentPageComponent);
+bootstrap(ContentComponent);
