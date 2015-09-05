@@ -4,6 +4,8 @@ var ejs	= require('ejs');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
+var routes = require('./app/routes/routes.js');
+
 /**
  * Set the port
  */
@@ -29,6 +31,7 @@ app.use(express.static(__dirname + '/Public'));
 app.get('*', function(req, res){
     res.sendFile('./Public/index.html'); // load our public/index.html file
 });
+app.post('/contact/mail', routes.contactMail);
 
 var server = app.listen(port, function(){
 	var host = server.address().address;
