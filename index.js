@@ -12,9 +12,9 @@ var port = process.env.PORT || 3000;
 /**
  * Rendering engine
  */
-app.engine('html', ejs);
 
 app.set('view engine', 'html');
+app.engine('html', ejs.renderFile);
 app.set('views', __dirname + '/Public/Views');
 
 /**
