@@ -6,18 +6,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
         case 4: return decorators.reduceRight(function(o, d) { return (d && d(target, key, o)) || o; }, desc);
     }
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var angular2_1 = require('angular2/angular2');
-var ContentPageComponent = (function () {
-    function ContentPageComponent() {
+var LogoComponent = (function () {
+    function LogoComponent() {
+        this.text = document.getElementById('#logoText');
+        /*global TweenLite*/
+        TweenLite.from(this.text, 2, { opacity: 0 });
     }
-    ContentPageComponent = __decorate([
+    LogoComponent = __decorate([
         angular2_1.Component({
-            selector: 'content-page'
+            selector: 'Logo'
         }),
         angular2_1.View({
-            templateUrl: './Components/Core/Content/content_template.html'
-        })
-    ], ContentPageComponent);
-    return ContentPageComponent;
+            templateUrl: './Components/Home/Logo/logo_template.svg'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], LogoComponent);
+    return LogoComponent;
 })();
-angular2_1.bootstrap(ContentPageComponent);
+exports.LogoComponent = LogoComponent;
+angular2_1.bootstrap(LogoComponent);

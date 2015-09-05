@@ -15,7 +15,7 @@ var SidebarComponent = (function () {
     }
     SidebarComponent = __decorate([
         angular2_1.Component({
-            selector: 'Sidebar'
+            selector: 'sidebar'
         }),
         angular2_1.View({
             templateUrl: 'Components/Core/Sidebar/sidebar_template.html'
