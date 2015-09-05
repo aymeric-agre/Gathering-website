@@ -4,6 +4,8 @@ var ejs	= require('ejs');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
+var routes = require('./app/routes/routes.js');
+
 /**
  * Set the port
  */
