@@ -9,6 +9,7 @@ import {Component, View, bootstrap} from 'angular2/angular2';
 })
 
 class LogoComponent{
+    /*global Snap*/
 
 }
 

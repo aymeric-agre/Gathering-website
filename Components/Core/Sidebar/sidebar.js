@@ -10,10 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var MainComponent = (function () {
-    function MainComponent() {
+var SidebarComponent = (function () {
+    function SidebarComponent() {
     }
-    MainComponent = __decorate([
+    SidebarComponent = __decorate([
         angular2_1.Component({
             selector: 'Sidebar'
         }),
@@ -21,7 +21,7 @@ var MainComponent = (function () {
             templateUrl: 'Components/Core/Sidebar/sidebar_template.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], MainComponent);
-    return MainComponent;
+    ], SidebarComponent);
+    return SidebarComponent;
 })();
-angular2_1.bootstrap(MainComponent);
+angular2_1.bootstrap(SidebarComponent);

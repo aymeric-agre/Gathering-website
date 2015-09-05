@@ -8,8 +8,8 @@ import {Component, View, bootstrap} from 'angular2/angular2';
     templateUrl: 'Components/Core/Sidebar/sidebar_template.html'
 })
 
-class MainComponent{
+class ContentComponent{
 
 }
 
-bootstrap(MainComponent);
+bootstrap(ContentComponent);
