@@ -1,12 +1,18 @@
-var express        = require('express');
-var app            = express();
-var bodyParser     = require('body-parser');
+var express = require('express');
+var app = express();
+var ejs	= require('ejs');
+var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+
+/**
+ * Set the port
+ */
+var port = process.env.PORT || 3000;
 
 /**
  * Rendering engine
  */
-// app.engine('html', cons.swig);
+app.engine('html', ejs);
 
 app.set('view engine', 'html');
 app.set('views', __dirname + '/Public/Views');
@@ -24,9 +30,8 @@ app.get('*', function(req, res){
     res.sendFile('./Public/index.html'); // load our public/index.html file
 });
 
-var server = app.listen(3000, function(){
+var server = app.listen(port, function(){
 	var host = server.address().address;
-	var port = server.address().port;
 	
 	console.log('Server app at http://%s:%s', host, port);
 })
