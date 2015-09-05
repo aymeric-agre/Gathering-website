@@ -1,6 +1,7 @@
-var express = require('express'),
-	
-	app = express();
+var express        = require('express');
+var app            = express();
+var bodyParser     = require('body-parser');
+var methodOverride = require('method-override');
 
 /**
  * Rendering engine
@@ -13,12 +14,15 @@ app.set('views', __dirname + '/Public/Views');
 /**
  * Definition of middlewares
  */
-// app.use(bodyParser());
+app.use(bodyParser.json()); 
+app.use(bodyParser.json({ type: 'application/vnd.api+json' })); 
+app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(methodOverride('X-HTTP-Method-Override')); 
 app.use(express.static(__dirname + '/Public'));
 
-app.get('/', function(req, res){
-	res.end()
-})
+app.get('*', function(req, res){
+    res.sendfile('./Public/index.html'); // load our public/index.html file
+});
 
 var server = app.listen(3000, function(){
 	var host = server.address().address;
@@ -26,3 +30,6 @@ var server = app.listen(3000, function(){
 	
 	console.log('Server app at http://%s:%s', host, port);
 })
+
+// expose app           
+exports = module.exports = app;  
