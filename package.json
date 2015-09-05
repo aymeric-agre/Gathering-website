@@ -18,6 +18,8 @@
   "homepage": "https://github.com/raeynok/Gathering-website",
   "dependencies": {
     "bower": "^1.5.2",
-    "express": "^4.13.3"
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "typescript": "^1.6.0-beta"
   }
 }
