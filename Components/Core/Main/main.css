@@ -1,0 +1,20 @@
+body {
+    height : 100%;
+}
+
+main{
+    height : 100%
+}
+
+main section{
+    height: 100%;
+}
+
+sidebar {
+    height : 100%;
+    background-color : blue;
+}
+
+content {
+    height : 100%;
+}
