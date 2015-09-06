@@ -7,16 +7,16 @@ app.directive('smallHexagon', function(){
         link : function(scope, element){
             /*global Snap*/
             var snap = new Snap(element[0].children[0]);
-            var hexa;
+            var hex;
 
             if(element[0].className==='large'){
                 snap.attr({'viewBox' :'0 0 400 100'});
-                hexa = snap.polygon('30.9,93.3 1.1,50 30.6,6.7 369.3,6.7 398.9,50 369.5,93.3');
+                hex = snap.polygon('30.9,93.3 1.1,50 30.6,6.7 369.3,6.7 398.9,50 369.5,93.3');
             }else{
                 snap.attr({'viewBox' :'0 0 100 100'});
-                hexa = snap.polygon('25,93.3 0,50 25,6.7 75,6.7 100,50 75,93.3');
+                hex = snap.polygon('25,93.3 0,50 25,6.7 75,6.7 100,50 75,93.3');
             }
-            hexa.attr({'fill' : element[0].getAttribute('color')});
+            hex.attr({'fill' : element[0].getAttribute('color')});
 
         }
     }

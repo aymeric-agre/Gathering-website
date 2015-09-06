@@ -9,8 +9,10 @@ app.directive('sidebar', function(){
             /*
                 ANIMATION
              */
-            /*global TweenLite*/
-            TweenLite.from('#sidebarCanvas', 1.5, {opacity : 0});
+            /*global TweenMax*/
+            /*global TimelineMax*/
+            var tl = new TimelineMax();
+            tl.from('#sidebarCanvas', 2, {opacity : 0});
 
 
             /*

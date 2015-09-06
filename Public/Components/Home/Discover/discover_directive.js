@@ -6,10 +6,10 @@ app.directive('discover', function(){
         templateUrl : './Components/Home/Discover/discover_template.html',
         link : function(scope, element){
 
-            /*global TweenLite*/
+            /*global TweenMax*/
             /*global Back*/
-            var hexagons = document.getElementsByName('small-hexagon');
-            TweenLite.from(hexagons, 1, {opacity:0, size : 0, ease: Back.easeOut.config(1)})
+            var hexagons = document.getElementsByTagName('small-hexagon');
+            TweenMax.staggerFrom(hexagons, 1.5, {opacity:0,  size : 0, ease: Back.easeOut.config(1)})
 
         }
     }
