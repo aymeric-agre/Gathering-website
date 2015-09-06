@@ -7,78 +7,54 @@ app.directive('sidebar', function(){
         link : function(scope, element){
 
             /*
-                ANIMATION
+             CANVAS
              */
-            /*global TweenMax*/
-            /*global TimelineMax*/
-            var tl = new TimelineMax();
-            tl.from('#sidebarCanvas', 2, {opacity : 0});
-
-
-            /*
-                CANVAS
-             */
-            var canvas = document.getElementById('sidebarCanvas');
-            var ctx = canvas.getContext('2d'),
-                mainGradient,
-                secondGradient;
+            var stage = new createjs.Stage("sidebarCanvas");
             var color1 = 'rgba(126, 23, 16, 1)',
                 color2 = 'rgba(229, 18, 18, 1)';
             var xStart, yStart, xStop, yStop, x0, y0, x1, y1, x2, y2, x3, y3;
             scope.screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-            //Mobile adaptibility
+            var background = new createjs.Shape();
+            var shape = new createjs.Shape();
+
+
             scope.$watch('screenWidth', function(newValue, oldValue){
-                var width = window.getComputedStyle(canvas, null).getPropertyValue("width");
-                var height = window.getComputedStyle(canvas, null).getPropertyValue("height");
+                var width = stage.canvas.width;
+                var height = stage.canvas.height;
                 if(newValue > 600){
-                    xStart=canvas.clientWidth/2; yStart= 0;
-                    xStop=canvas.clientWidth/2, yStop= canvas.clientHeight;
-                    x0= 0; y0=canvas.clientHeight/2 - 200;
-                    x1= canvas.clientWidth/2; y1= canvas.clientHeight/2-300;
-                    x2= canvas.clientWidth/2; y2= canvas.clientHeight/2+300;
-                    x3= 0; y3= canvas.clientHeight/2 + 200;
+                    xStart=width/2; yStart= 0;
+                    xStop=width/2; yStop= height;
+                    x0= 0; y0=height/2 - 200;
+                    x1= width; y1= height/2-300;
+                    x2= width; y2= height/2+300;
+                    x3= 0; y3= height/2 + 200;
                     drawSidebar();
                 }else{
-                    xStart=0; yStart= canvas.clientHeight/2;
-                    xStop=canvas.clientWidth, yStop= canvas.clientHeight/2;
-                    x0= canvas.clientWidth/2 - 200; y0=0;
-                    x1= canvas.clientWidth/2-300; y1= canvas.clientHeight;
-                    x2= canvas.clientWidth/2+300; y2= canvas.clientHeight;
-                    x3= canvas.clientWidth/2 + 200; y3= 0;
+                    xStart=0; yStart= height/2;
+                    xStop=width; yStop= height/2;
+                    x0= width/2 - 200; y0=0;
+                    x1= width/2-300; y1= height;
+                    x2= width/2+300; y2= height;
+                    x3= width/2 + 200; y3= 0;
                     drawSidebar();
                 }
             });
 
             function drawSidebar(){
-                // Create gradient
-                mainGradient = ctx.createLinearGradient(xStart, yStart, xStop, yStop);
-                secondGradient = ctx.createLinearGradient(xStart, yStart, xStop, yStop);
-
-                // Add colors
-                mainGradient.addColorStop(1, color1);
-                mainGradient.addColorStop(0, color2);
-                secondGradient.addColorStop(0, color1);
-                secondGradient.addColorStop(1, color2);
-
-
-                // Fill with gradient
-                ctx.fillStyle = mainGradient;
-                ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
-
-                //Fill the polygon with the second gradient
-                ctx.beginPath();
-                ctx.moveTo(x0,y0);
-                ctx.lineTo(x1, y1);
-                ctx.lineTo(x2, y2);
-                ctx.lineTo(x3, y3);
-                ctx.fillStyle = secondGradient;
-                ctx.fill();
+                background.graphics.beginLinearGradientFill([color1, color2], [1, 0], xStart, yStart, xStop, yStop).drawRect(0, 0, stage.canvas.width, stage.canvas.height);
+                shape.graphics.beginLinearGradientFill([color1, color2], [0, 1], xStart, yStart, xStop, yStop).moveTo(x0,y0).lineTo(x1,y1).lineTo(x2,y2).lineTo(x3,y3);
+                stage.addChild(background);
+                stage.addChild(shape);
+                stage.update();
             }
 
 
-
-
+            /*
+                ANIMATION
+             */
+            /*global TweenMax*/
+            TweenMax.from('#sidebarCanvas', 1, {opacity:0});
 
 
         }

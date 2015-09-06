@@ -19,10 +19,12 @@
   ],
   "dependencies": {
     "angular-material": "~0.10.1",
+    "angular-route": "~1.4.5",
+    "angular-ui-router": "~0.2.15",
+    "EaselJS": "~0.8.1",
     "gsap": "~1.17.0",
     "jquery": "~2.1.4",
     "Snap.svg": "snap.svg#~0.4.1",
-    "angular-ui-router": "~0.2.15",
-    "angular-route": "~1.4.5"
+    "TweenJS": "~0.6.1"
   }
 }
