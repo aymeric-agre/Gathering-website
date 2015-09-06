@@ -6554,7 +6554,7 @@ angular.module('material.components.gridList', ['material.core'])
  * @module material.Components.gridList
  * @restrict E
  * @description
- * Grid lists are an alternative to standard list views. Grid lists are distinct
+ * Grid lists are an alternative to standard list Views. Grid lists are distinct
  * from grids used for layouts and other visual presentations.
  *
  * A grid list is best suited to presenting a homogenous data type, typically
@@ -16938,8 +16938,8 @@ MdTabsController.$inject = ["$scope", "$element", "$window", "$mdConstant", "$md
  *  2. Tabs with internal view content
  *  3. Tabs with external view content
  *
- * **Tab-only** support is useful when tab buttons are used for custom navigation regardless of any other Components, content, or views.
- * **Tabs with internal views** are the traditional usages where each tab has associated view content and the view switching is managed internally by the Tabs component.
+ * **Tab-only** support is useful when tab buttons are used for custom navigation regardless of any other Components, content, or Views.
+ * **Tabs with internal Views** are the traditional usages where each tab has associated view content and the view switching is managed internally by the Tabs component.
  * **Tabs with external view content** is often useful when content associated with each tab is independently managed and data-binding notifications announce tab selection changes.
  *
  * Additional features also include:

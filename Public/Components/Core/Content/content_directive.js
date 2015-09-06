@@ -3,7 +3,7 @@
 app.directive('contentPage', function(){
     return{
         restrict : 'E',
-        templateUrl : './Components/Core/Main/main_template.html',
+        templateUrl : './Components/Core/Content/content_template.html',
         link : function(scope, element){
 
         }

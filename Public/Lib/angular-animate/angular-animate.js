@@ -3517,11 +3517,11 @@ var $$AnimationProvider = ['$animateProvider', function($animateProvider) {
  * ## Animation Anchoring (via `ng-animate-ref`)
  *
  * ngAnimate in AngularJS 1.4 comes packed with the ability to cross-animate elements between
- * structural areas of an application (like views) by pairing up elements using an attribute
+ * structural areas of an application (like Views) by pairing up elements using an attribute
  * called `ng-animate-ref`.
  *
- * Let's say for example we have two views that are managed by `ng-view` and we want to show
- * that there is a relationship between two Components situated in within these views. By using the
+ * Let's say for example we have two Views that are managed by `ng-view` and we want to show
+ * that there is a relationship between two Components situated in within these Views. By using the
  * `ng-animate-ref` attribute we can identify that the two Components are paired together and we
  * can then attach an animation, which is triggered when the view changes.
  *
@@ -3564,7 +3564,7 @@ var $$AnimationProvider = ['$animateProvider', function($animateProvider) {
  * }
  * ```
  *
- * We also **must** include animations for the views that are being entered and removed
+ * We also **must** include animations for the Views that are being entered and removed
  * (otherwise anchoring wouldn't be possible since the new view would be inserted right away).
  *
  * ```css

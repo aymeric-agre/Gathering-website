@@ -1,20 +1,78 @@
-body {
-    height : 100%;
+content-page{
+    background-color : rgba(230,230,230,1);
 }
 
-main{
-    height : 100%
+@media (min-width:960px) {
+    body {
+        min-height : 100%;
+    }
+
+    main{
+        height : 100%
+    }
+
+    main section{
+        height: 100%;
+    }
+
+    sidebar {
+        height : 100%;
+        width : 120px;
+        overflow: hidden;
+    }
+
+    sidebar canvas {
+        height: 100%;
+        width : 240px;
+    }
+
+    content-page {
+        min-height : 100%;
+        width:100%;
+    }
 }
 
-main section{
-    height: 100%;
+@media (max-width : 960px)and(min-width: 600px){
+    body {
+        min-height : 100%;
+    }
+
+    main{
+        height : 100%
+    }
+
+    main section{
+        height: 100%;
+    }
+
+    sidebar {
+        height : 100%;
+        width : 100px;
+    }
+
+    sidebar canvas {
+        height: 100%;
+        width : 200px;
+    }
+
+    content-page {
+        min-height : 100%;
+        width:100%;
+    }
 }
 
-sidebar {
-    height : 100%;
-    background-color : blue;
-}
+@media (max-width:600px) {
+    sidebar {
+        height : 60px;
+        overflow: hidden;
+    }
 
-content {
-    height : 100%;
+    sidebar canvas {
+        height: 120px;
+        width : 100%;
+    }
+
+    content-page{
+        width:100%;
+    }
 }

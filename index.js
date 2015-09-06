@@ -17,7 +17,7 @@ var port = process.env.PORT || 3000;
 
 app.set('view engine', 'html');
 app.engine('html', ejs.renderFile);
-app.set('views', __dirname + '/Public/Views');
+app.set('Views', __dirname + '/Public/Views');
 
 /**
  * Definition of middlewares
@@ -29,7 +29,7 @@ app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/Public'));
 
 app.get('*', function(req, res){
-    res.sendfile('./Public/index.html'); // load our public/index.html file
+     res.sendfile('./Public/index.html'); // load our public/index.html file
 });
 app.post('/contact/mail', routes.contactMail);
 
