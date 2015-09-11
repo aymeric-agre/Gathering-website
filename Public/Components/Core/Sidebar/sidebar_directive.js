@@ -3,7 +3,7 @@
 app.directive('sidebar', function(){
     return{
         restrict : 'E',
-        template : '<canvas id="sidebarCanvas" height="1080" width="240"></canvas>',
+        template : '<canvas id="sidebarCanvas" height="1080" width="200"></canvas>',
         link : function(scope, element){
 
             /*
@@ -48,13 +48,6 @@ app.directive('sidebar', function(){
                 stage.addChild(shape);
                 stage.update();
             }
-
-
-            /*
-                ANIMATION
-             */
-            /*global TweenMax*/
-            TweenMax.from('#sidebarCanvas', 1, {opacity:0});
 
 
         }
