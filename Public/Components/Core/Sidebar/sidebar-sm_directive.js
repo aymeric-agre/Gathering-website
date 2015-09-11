@@ -25,6 +25,23 @@ app.directive('sidebarSm', function(){
             stage.addChild(shape);
             stage.update();
 
+            /*
+             ANIMATION
+             */
+            /*global TweenMax*/
+            /*global TimelineMax*/
+
+            //setup a "tick" event listener so that the EaselJS stage gets updated on every frame/tick
+            TweenMax.ticker.addEventListener("tick", stage.update, stage);
+            var tm = new TimelineMax();
+            tm.from(background, 0.5, {
+                opacity : 0,
+                easel : {y:-height-100}
+            })
+                .from(shape, 0.5, {
+                    easel: {y: -height}
+                })
+
 
         }
     }
