@@ -12,6 +12,10 @@ app.config(function ($stateProvider, $urlRouterProvider){
             state('home', {
                 url: '/',
                 templateUrl: './Components/Home/home.html'
+            }).
+            state('presentation', {
+                url: '/presentation',
+                templateUrl :'./Components/Presentation/presentation.html'
             });
 
 });
