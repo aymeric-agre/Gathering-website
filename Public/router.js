@@ -16,7 +16,19 @@ app.config(function ($stateProvider, $urlRouterProvider){
             state('presentation', {
                 url: '/presentation',
                 templateUrl :'./Components/Presentation/presentation.html'
-            });
+            }).
+                state('presentation.education', {
+                    url: '/education',
+                    templateUrl : './Components/Presentation/Pages/education.html'
+                }).
+                state('presentation.games', {
+                    url: '/education',
+                    templateUrl : './Components/Presentation/Pages/games.html'
+                }).
+                state('presentation.emotions', {
+                    url: '/education',
+                    templateUrl : './Components/Presentation/Pages/emotions.html'
+                });
 
 });
 
