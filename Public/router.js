@@ -15,8 +15,7 @@ app.config(function ($stateProvider, $urlRouterProvider){
             }).
             state('presentation', {
                 url: '/presentation',
-                template : '<main-presentation></main-presentation>',
-                templateUrl :'Components/Presentation/Main_presentation/main-presentation_template.html'
+                template : '<main-presentation></main-presentation>'
             }).
                 state('presentation.education', {
                     url: '/education',
@@ -29,7 +28,11 @@ app.config(function ($stateProvider, $urlRouterProvider){
                 state('presentation.emotions', {
                     url: '/emotions',
                     template : '<fiche-presentation fiche="\'emotions\'"></fiche-presentation>'
-                });
+                }).
+            state('team', {
+                url: '/team',
+                template : '<main-team></main-team>'
+            });
 
 });
 

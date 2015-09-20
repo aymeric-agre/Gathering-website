@@ -2,5 +2,8 @@ sidebar-content{
     position : absolute;
     top:0;
     left:0;
-    margin : 25px;
+    margin : 20px;
+    height : 70px;
+    width: 70px;
+    cursor: pointer;
 }

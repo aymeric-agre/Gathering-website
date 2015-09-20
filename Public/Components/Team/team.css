@@ -1,0 +1,12 @@
+main-team {
+    min-height : 100%;
+}
+
+fiche-team {
+    height: 80%;
+    width : 150px;
+    background-color: rgba(180, 30, 30, 1);
+    border : solid white 3px;
+    padding : 20px;
+    text-align: center;
+}

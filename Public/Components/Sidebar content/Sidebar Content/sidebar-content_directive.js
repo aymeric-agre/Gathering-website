@@ -9,7 +9,9 @@ app.directive('sidebarContent', function($state){
             /*global TimelineMax*/
             /*global TweenMax*/
             /*global Back*/
-
+            element.bind('click', function(){
+                $state.go('team');
+            })
         }
     }
 });
