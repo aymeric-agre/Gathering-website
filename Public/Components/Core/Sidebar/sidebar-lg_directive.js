@@ -3,7 +3,7 @@
 app.directive('sidebarLg', function(){
     return{
         restrict : 'E',
-        template : '<canvas id="sidebarCanvasLg" height="1080" width="240"></canvas>',
+        template : '<canvas id="sidebarCanvasLg" height="1080" width="240"></canvas><sidebar-content></sidebar-content>',
         link : function(scope, element){
 
             /*

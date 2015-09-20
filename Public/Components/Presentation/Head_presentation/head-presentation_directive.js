@@ -12,17 +12,10 @@ app.directive('headPresentation', function($state){
             var tm = new TimelineMax();
             tm.staggerFrom(element[0].children, 0.3, {
                 opacity: 0,
-                scale : 0.8
+                scale : 0.8,
+                left : '-=20px'
             }, 0.1);
 
-
-            scope.hideButton = function(page){
-                var tmLeave = new TimelineMax();
-                tmLeave.staggerTo(element[0].children, 0.2, {scale : 0.8}, 0.1);
-                tmLeave.staggerTo(element[0].children, 0.2, {top : -300},0.1);
-                $state.go('presentation.'+page
-                );
-            };
 
         }
     }

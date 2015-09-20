@@ -3,5 +3,27 @@ head-presentation a{
     margin-top : 100px;
     width : 200px;
     height : 100px;
-    background-color: rgba(126, 13, 13, 0.5);
+    background-color: rgba(126, 13, 13,0.7);
+    text-align: center;
+    color: white;
+    cursor : pointer;
+    transition : background-color 0.3s linear;
+}
+
+head-presentation a:hover{
+    background-color: rgba(126, 13, 13,1);
+}
+
+fiche-presentation {
+    position : relative;
+    display : block;
+    margin-top : 50px;
+    padding : 30px;
+    background-color: rgba(150,150,150,0.3);
+    min-height : 300px;
+    transition : background-color 0.3s linear;
+}
+
+fiche-presentation:hover {
+    background-color: rgba(150,150,150,0.5);
 }

@@ -15,19 +15,20 @@ app.config(function ($stateProvider, $urlRouterProvider){
             }).
             state('presentation', {
                 url: '/presentation',
-                templateUrl :'./Components/Presentation/presentation.html'
+                template : '<main-presentation></main-presentation>',
+                templateUrl :'Components/Presentation/Main_presentation/main-presentation_template.html'
             }).
                 state('presentation.education', {
                     url: '/education',
-                    templateUrl : './Components/Presentation/Pages/education.html'
+                    template : '<fiche-presentation fiche="\'education\'"></fiche-presentation>'
                 }).
                 state('presentation.games', {
-                    url: '/education',
-                    templateUrl : './Components/Presentation/Pages/games.html'
+                    url: '/games',
+                    template : '<fiche-presentation fiche="\'games\'"></fiche-presentation>'
                 }).
                 state('presentation.emotions', {
-                    url: '/education',
-                    templateUrl : './Components/Presentation/Pages/emotions.html'
+                    url: '/emotions',
+                    template : '<fiche-presentation fiche="\'emotions\'"></fiche-presentation>'
                 });
 
 });
