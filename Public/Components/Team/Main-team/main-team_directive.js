@@ -9,7 +9,7 @@ app.directive('mainTeam', function($state){
             /*global TimelineMax*/
             /*global TweenMax*/
             /*global Back*/
-            var fiches = document.getElementsByTagName('fiche-team')
+            var fiches = document.getElementsByTagName('fiche-team');
             TweenMax.staggerFrom(fiches, 0.4, {
                 bottom : '-=500',
                 opacity : 0
